@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1017047601296",
+    "firebase_url": "https://butikku-v2.firebaseio.com",
+    "project_id": "butikku-v2",
+    "storage_bucket": "butikku-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017047601296:android:58d23f09ff5e1f7b7d4815",
+        "android_client_info": {
+          "package_name": "com.frdcompany.butikku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017047601296-794q7lvshe8ib6evc2v2h5m1ekmjeld6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frdcompany.butikku",
+            "certificate_hash": "79b5571d0f881d66411dee960a46e6e92b5ccdc3"
+          }
+        },
+        {
+          "client_id": "1017047601296-hu4lku1tsgp4ko99gpiip21bmsre1fh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrXPJa9i7QvMG11t94ap7nWidGP_6rnPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017047601296-hu4lku1tsgp4ko99gpiip21bmsre1fh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
