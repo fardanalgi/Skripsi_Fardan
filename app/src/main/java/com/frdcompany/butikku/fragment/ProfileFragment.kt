@@ -1,4 +1,4 @@
-package com.frdcompany.butikku
+package com.frdcompany.butikku.fragment
 
 
 import android.os.Bundle
@@ -6,18 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.frdcompany.butikku.R
 
 /**
  * A simple [Fragment] subclass.
  */
-class CartFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
 

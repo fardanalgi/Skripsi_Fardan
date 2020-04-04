@@ -1,10 +1,12 @@
 package com.frdcompany.butikku
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import com.frdcompany.butikku.fragment.CartFragment
+import com.frdcompany.butikku.fragment.home.HomeFragment
+import com.frdcompany.butikku.fragment.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

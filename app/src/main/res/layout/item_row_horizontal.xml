@@ -9,8 +9,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:layout_marginStart="8dp"
-        app:cardCornerRadius="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="#f5f5f5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,9 +25,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="15dp">
 
                 <ImageView
+                    android:id="@+id/img_gambar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -34,12 +37,13 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/textView11"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Title" />
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Title"
+                android:textStyle="bold"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
