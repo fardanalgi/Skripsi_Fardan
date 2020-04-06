@@ -190,7 +190,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView7" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/btn_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -202,16 +202,16 @@
             app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_add_to_chart"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
             android:background="@drawable/shape_rectangle_green"
             android:text="Add to cart"
             android:textColor="@color/colorWhite"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_message"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+            app:layout_constraintTop_toTopOf="@+id/btn_message" />
 
         <ImageView
             android:id="@+id/imageView5"

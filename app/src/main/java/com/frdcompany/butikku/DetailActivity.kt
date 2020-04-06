@@ -1,5 +1,7 @@
 package com.frdcompany.butikku
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -28,6 +30,16 @@ class DetailActivity : AppCompatActivity() {
 
         btn_back.setOnClickListener {
             finish()
+        }
+
+        btn_message.setOnClickListener {
+            val uri = Uri.parse("https://api.whatsapp.com/send?phone=6287848491962&text=Permisi%20min%20saya%20mau%20pesan")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            startActivity(intent)
+        }
+
+        btn_add_to_chart.setOnClickListener {
+
         }
     }
 }
