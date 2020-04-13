@@ -4,20 +4,29 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.frdcompany.butikku.fragment.home.DiskonAdapter
 import com.frdcompany.butikku.fragment.home.Item
-import com.google.firebase.database.DatabaseReference
+import com.frdcompany.butikku.fragment.home.PopularAdapter
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class DetailActivity : AppCompatActivity() {
 
     lateinit var mDatabase: DatabaseReference
     private var dataList = ArrayList<Item>()
 
+    private val TAG = "Message"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        mDatabase = FirebaseDatabase.getInstance().getReference("Item")
         val data = intent.getParcelableExtra<Item>("data")
 
         tv_detail_title.text = data.title
@@ -27,6 +36,12 @@ class DetailActivity : AppCompatActivity() {
         Glide.with(this)
             .load(data.gambar)
             .into(img_gambar)
+
+        rv_pilihan.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        getData()
+
+
+
 
         btn_back.setOnClickListener {
             finish()
@@ -39,7 +54,37 @@ class DetailActivity : AppCompatActivity() {
         }
 
         btn_add_to_chart.setOnClickListener {
-
+            val intent = Intent(this, PengirimanActivity::class.java)
+                .putExtra("data", data)
+            startActivity(intent)
         }
+    }
+
+    private fun getData(){
+        mDatabase.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                dataList.clear()
+                for (getdataSnapshot in dataSnapshot.getChildren()){
+
+                    val item = getdataSnapshot.getValue(Item::class.java!!)
+                    dataList.add(item!!)
+                }
+
+                if (dataList.isNotEmpty()){
+                    rv_pilihan.adapter = PopularAdapter(dataList){
+                        val intent = Intent(this@DetailActivity,DetailActivity::class.java)
+                            .putExtra("data",it)
+                        startActivity(intent)
+                    }
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.w(TAG, "Failed to read value.", error.toException())
+            }
+
+        })
     }
 }

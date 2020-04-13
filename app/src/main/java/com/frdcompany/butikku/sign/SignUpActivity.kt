@@ -16,6 +16,8 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var sPassword : String
     lateinit var sNama : String
     lateinit var sEmail : String
+    lateinit var sAddress: String
+    lateinit var sPhone: String
 
     private lateinit var mFirebaseDatabase: DatabaseReference
     private lateinit var mFirebaseInstance: FirebaseDatabase
@@ -38,29 +40,42 @@ class SignUpActivity : AppCompatActivity() {
             sPassword = et_password.text.toString()
             sNama = et_nama.text.toString()
             sEmail = et_email.text.toString()
+            sAddress = et_address.text.toString()
+            sPhone = et_phone.text.toString()
 
-            if (sUsername.equals("")){
+            if (sUsername.equals("")) {
                 et_username.error = "Silakan isi Username"
                 et_username.requestFocus()
-            }else if (sPassword.equals("")){
+            } else if (sPassword.equals("")) {
                 et_password.error = "Silakan isi Password"
                 et_password.requestFocus()
-            }else if (sNama.equals("")){
+            } else if (sNama.equals("")) {
                 et_nama.error = "Silakan isi Nama"
                 et_nama.requestFocus()
-            }else {
-                saveUser(sUsername,sPassword,sNama,sEmail)
+            } else if (sEmail.equals("")) {
+                et_email.error = "Silakan isi Email"
+                et_email.requestFocus()
+            } else if (sAddress.equals("")) {
+                et_address.error = "Silakan isi Address"
+                et_address.requestFocus()
+            } else if (sPhone.equals("")) {
+                et_phone.error = "Silakan isi Phone Number"
+                et_phone.requestFocus()
+            } else {
+                saveUser(sUsername, sPassword, sNama, sEmail, sAddress, sPhone)
             }
         }
     }
 
-    private fun saveUser(sUsername: String, sPassword: String, sNama: String, sEmail: String){
+    private fun saveUser(sUsername: String, sPassword: String, sNama: String, sEmail: String, sAddress: String, sPhone: String){
 
         val user = User()
         user.email = sEmail
         user.username = sUsername
         user.nama = sNama
         user.password = sPassword
+        user.alamat = sAddress
+        user.telp = sPhone
 
         if (sUsername != null){
             chackingUsername(sUsername, user)
@@ -79,6 +94,8 @@ class SignUpActivity : AppCompatActivity() {
                     preference.setValues("user", data.username.toString())
                     preference.setValues("url", "")
                     preference.setValues("email", data.email.toString())
+                    preference.setValues("alamat", data.alamat.toString())
+                    preference.setValues("telp", data.telp.toString())
                     preference.setValues("status", "1")
 
                     val intent = Intent(this@SignUpActivity,MainActivity::class.java)

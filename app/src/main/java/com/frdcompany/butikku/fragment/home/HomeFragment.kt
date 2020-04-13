@@ -46,8 +46,6 @@ class HomeFragment : Fragment() {
 
         rv_popular.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         rv_bestPrice.layoutManager = LinearLayoutManager(context!!.applicationContext)
-
-
         rv_banner.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         getData()
 

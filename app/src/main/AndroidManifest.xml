@@ -21,7 +21,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".PengirimanActivity"></activity>
+        <activity android:name=".DetailActivity" />
         <activity android:name=".sign.SignUpActivity" />
         <activity android:name=".sign.SignInActivity" />
         <activity android:name=".onboarding.OnboardingTreeActivity" />
