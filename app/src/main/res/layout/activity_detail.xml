@@ -195,7 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             android:src="@drawable/ic_message_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -203,7 +203,7 @@
 
         <Button
             android:id="@+id/btn_add_to_chart"
-            android:layout_width="300dp"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
             android:background="@drawable/shape_rectangle_green"

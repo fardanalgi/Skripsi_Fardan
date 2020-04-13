@@ -21,9 +21,9 @@ class PengirimanActivity : AppCompatActivity() {
         val data = intent.getParcelableExtra<Item>("data")
 
         tv_title.text = data.title
-        tv_diskon.text = data.diskon
-        tv_harga.text = data.harga
-        tv_total.text = data.harga
+        tv_diskon.text = data.harga
+        tv_harga.text = data.diskon
+        tv_total.text = data.diskon
 
 
         Glide.with(this)
