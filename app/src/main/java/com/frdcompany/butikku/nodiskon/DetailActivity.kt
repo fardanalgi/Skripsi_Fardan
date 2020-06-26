@@ -1,19 +1,17 @@
-package com.frdcompany.butikku
+package com.frdcompany.butikku.nodiskon
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.frdcompany.butikku.fragment.home.DiskonAdapter
+import com.frdcompany.butikku.R
 import com.frdcompany.butikku.fragment.home.Item
 import com.frdcompany.butikku.fragment.home.PopularAdapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class DetailActivity : AppCompatActivity() {
 
@@ -36,6 +34,7 @@ class DetailActivity : AppCompatActivity() {
         Glide.with(this)
             .load(data.gambar)
             .into(img_gambar)
+
 
         rv_pilihan.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
         getData()
@@ -73,7 +72,8 @@ class DetailActivity : AppCompatActivity() {
 
                 if (dataList.isNotEmpty()){
                     rv_pilihan.adapter = PopularAdapter(dataList){
-                        val intent = Intent(this@DetailActivity,DetailActivity::class.java)
+                        val intent = Intent(this@DetailActivity,
+                            DetailActivity::class.java)
                             .putExtra("data",it)
                         startActivity(intent)
                     }

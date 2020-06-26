@@ -1,8 +1,9 @@
-package com.frdcompany.butikku
+package com.frdcompany.butikku.nodiskon
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.frdcompany.butikku.R
 import com.frdcompany.butikku.fragment.home.Item
 import com.frdcompany.butikku.utils.Preferences
 import kotlinx.android.synthetic.main.activity_pengiriman.*
@@ -21,9 +22,9 @@ class PengirimanActivity : AppCompatActivity() {
         val data = intent.getParcelableExtra<Item>("data")
 
         tv_title.text = data.title
-        tv_diskon.text = data.harga
-        tv_harga.text = data.diskon
-        tv_total.text = data.diskon
+
+        tv_harga.text = data.harga
+        tv_total.text = data.harga
 
 
         Glide.with(this)

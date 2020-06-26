@@ -21,8 +21,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
-        <activity android:name=".PengirimanActivity"></activity>
-        <activity android:name=".DetailActivity" />
+        <activity android:name=".diskon.PengirimanDiskonActivity"></activity>
+        <activity android:name=".CheckoutActivity" />
+        <activity android:name=".BayarDibankActivity" />
+        <activity android:name=".BayarDitempatActivity" />
+        <activity android:name=".MetodePembayaranActivity" />
+        <activity android:name=".diskon.DetailDiskonActivity" />
+        <activity android:name=".nodiskon.PengirimanActivity" />
+        <activity android:name=".nodiskon.DetailActivity" />
         <activity android:name=".sign.SignUpActivity" />
         <activity android:name=".sign.SignInActivity" />
         <activity android:name=".onboarding.OnboardingTreeActivity" />

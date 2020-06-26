@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.frdcompany.butikku.R
 
-class DiskonAdapter (private var data: List<Item>,
-                     private val listener: (Item) -> Unit)
+class DiskonAdapter (private var data: List<Diskon>,
+                     private val listener: (Diskon) -> Unit)
     : RecyclerView.Adapter<DiskonAdapter.LeagueViewHolder>() {
 
     lateinit var ContextAdapter : Context
@@ -38,7 +38,7 @@ class DiskonAdapter (private var data: List<Item>,
 
         private val imgGambar: ImageView = view.findViewById(R.id.img_gambar)
 
-        fun bindItem(data: Item, listener: (Item) -> Unit, context : Context, position : Int) {
+        fun bindItem(data: Diskon, listener: (Diskon) -> Unit, context : Context, position : Int) {
 
             tvTitle.text = data.title
             tvDiskon.text = data.diskon

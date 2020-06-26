@@ -73,6 +73,8 @@ class SignInActivity : AppCompatActivity() {
                         preferences.setValues("user", user.username.toString())
                         preferences.setValues("url", user.url.toString())
                         preferences.setValues("email", user.email.toString())
+                        preferences.setValues("alamat", user.alamat.toString())
+                        preferences.setValues("telp", user.telp.toString())
                         preferences.setValues("status","1")
 
 

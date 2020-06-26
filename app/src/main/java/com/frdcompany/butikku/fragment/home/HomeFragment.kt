@@ -9,7 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.frdcompany.butikku.DetailActivity
+import com.frdcompany.butikku.nodiskon.DetailActivity
+import com.frdcompany.butikku.diskon.DetailDiskonActivity
 import com.frdcompany.butikku.R
 import com.frdcompany.butikku.baner.Banner
 import com.frdcompany.butikku.baner.BannerAdapter
@@ -24,9 +25,11 @@ class HomeFragment : Fragment() {
 
     private lateinit var preferences: Preferences
     lateinit var mDatabase : DatabaseReference
+    lateinit var mDatabaseDiskon : DatabaseReference
 
     private var mList = ArrayList<Banner>()
     private var dataList = ArrayList<Item>()
+    private var mData = ArrayList<Diskon>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +44,7 @@ class HomeFragment : Fragment() {
 
         preferences = Preferences(activity!!.applicationContext)
         mDatabase = FirebaseDatabase.getInstance().getReference("Item")
+        mDatabaseDiskon = FirebaseDatabase.getInstance().getReference("Diskon")
         tv_hello2.setText(preferences.getValues("nama"))
 
 
@@ -48,6 +52,7 @@ class HomeFragment : Fragment() {
         rv_bestPrice.layoutManager = LinearLayoutManager(context!!.applicationContext)
         rv_banner.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         getData()
+        getDataDiskon()
 
         rv_banner.adapter = BannerAdapter(mList){
         }
@@ -55,6 +60,7 @@ class HomeFragment : Fragment() {
         mList.add(Banner(R.drawable.baner2))
         mList.add(Banner(R.drawable.baner1))
         mList.add(Banner(R.drawable.baner3))
+
 
     }
 
@@ -71,12 +77,36 @@ class HomeFragment : Fragment() {
 
                 if (dataList.isNotEmpty()){
                     rv_popular.adapter = PopularAdapter(dataList){
-                        val intent = Intent(context,DetailActivity::class.java)
+                        val intent = Intent(context,
+                            DetailActivity::class.java)
                             .putExtra("data",it)
                         startActivity(intent)
                     }
-                    rv_bestPrice.adapter = DiskonAdapter(dataList){
-                        val intent = Intent(context,DetailActivity::class.java)
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(context,""+error.message, Toast.LENGTH_LONG).show()
+            }
+
+        })
+    }
+
+    private fun getDataDiskon(){
+        mDatabaseDiskon.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                mData.clear()
+                for (getdataSnapshot in dataSnapshot.getChildren()){
+
+                    val item = getdataSnapshot.getValue(Diskon::class.java!!)
+                    mData.add(item!!)
+                }
+
+                if (mData.isNotEmpty()){
+                    rv_bestPrice.adapter = DiskonAdapter(mData){
+                        val intent = Intent(context, DetailDiskonActivity::class.java)
                             .putExtra("data",it)
                         startActivity(intent)
                     }
