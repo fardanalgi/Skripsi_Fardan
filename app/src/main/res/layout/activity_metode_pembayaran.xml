@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5f5f5"
     tools:context=".MetodePembayaranActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,6 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view5">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_bayarBank"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -116,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Metode Pembayaran"
+        android:textColor="@color/colorGrenText"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -150,7 +153,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+            android:id="@+id/btn_bayardiTempat"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
