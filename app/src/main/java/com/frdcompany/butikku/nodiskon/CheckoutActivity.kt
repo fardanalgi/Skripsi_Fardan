@@ -1,4 +1,4 @@
-package com.frdcompany.butikku
+package com.frdcompany.butikku.nodiskon
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -10,26 +10,29 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
+import com.frdcompany.butikku.R
 import com.frdcompany.butikku.fragment.home.Item
-import com.frdcompany.butikku.nodiskon.DetailActivity
-import kotlinx.android.synthetic.main.activity_bayar_ditempat.*
+import kotlinx.android.synthetic.main.activity_bayar_ditempat.tv_total
+import kotlinx.android.synthetic.main.activity_checkout.*
 
-class BayarDitempatActivity : AppCompatActivity() {
+class CheckoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bayar_ditempat)
+        setContentView(R.layout.activity_checkout)
 
         val data = intent.getParcelableExtra<Item>("data")
 
         tv_total.text = data.harga
+        tv_total2.text = data.harga
 
-        btn_bayar.setOnClickListener {
-            val intent = Intent(this,OrderConfirmedActivity::class.java)
+        btn_next.setOnClickListener {
+            val intent = Intent (this, OrderBankConfirmedActivity::class.java)
             startActivity(intent)
 
             showNotif(data)
         }
+
     }
 
     private fun showNotif(datas: Item) {
@@ -73,8 +76,8 @@ class BayarDitempatActivity : AppCompatActivity() {
             .setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
             .setLights(Color.RED, 3000, 3000)
             .setDefaults(Notification.DEFAULT_SOUND)
-            .setContentTitle("Sukses Terbeli")
-            .setContentText(datas.title+" dalam pengiriman, Enjoy :D ")
+            .setContentTitle("Menunggu Pembayaran")
+            .setContentText(datas.title+"Lakukan pembayaran sebelum 24 jam")
 
         notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(115, builder.build())

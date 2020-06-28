@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
-import com.frdcompany.butikku.MetodePembayaranActivity
 import com.frdcompany.butikku.R
 import com.frdcompany.butikku.fragment.home.Item
 import com.frdcompany.butikku.utils.Preferences
@@ -38,7 +37,8 @@ class PengirimanActivity : AppCompatActivity() {
         }
 
         btn_pilih_pembayaran.setOnClickListener {
-            val intent = Intent(this@PengirimanActivity,MetodePembayaranActivity::class.java)
+            val intent = Intent(this@PengirimanActivity,
+                MetodePembayaranActivity::class.java)
                 .putExtra("data", data)
             startActivity(intent)
         }

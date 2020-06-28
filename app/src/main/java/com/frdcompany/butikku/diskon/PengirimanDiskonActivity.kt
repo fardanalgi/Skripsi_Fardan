@@ -1,10 +1,12 @@
 package com.frdcompany.butikku.diskon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.frdcompany.butikku.R
 import com.frdcompany.butikku.fragment.home.Diskon
+import com.frdcompany.butikku.nodiskon.MetodePembayaranActivity
 import com.frdcompany.butikku.utils.Preferences
 import kotlinx.android.synthetic.main.activity_pengiriman.btn_back
 import kotlinx.android.synthetic.main.activity_pengiriman.img_gambar
@@ -40,6 +42,12 @@ class PengirimanDiskonActivity : AppCompatActivity() {
 
         btn_back.setOnClickListener {
             finish()
+        }
+
+        btn_next.setOnClickListener {
+            val intent = Intent (this, MetodePembayaranActivity::class.java)
+                .putExtra("data", data)
+            startActivity(intent)
         }
 
     }

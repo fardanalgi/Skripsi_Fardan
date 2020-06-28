@@ -1,8 +1,9 @@
-package com.frdcompany.butikku
+package com.frdcompany.butikku.nodiskon
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.frdcompany.butikku.R
 import com.frdcompany.butikku.fragment.home.Item
 import kotlinx.android.synthetic.main.activity_metode_pembayaran.*
 
@@ -16,6 +17,12 @@ class MetodePembayaranActivity : AppCompatActivity() {
 
         btn_bayardiTempat.setOnClickListener {
             val intent = Intent(this@MetodePembayaranActivity, BayarDitempatActivity::class.java)
+                .putExtra("data", data)
+            startActivity(intent)
+        }
+
+        btn_bayarBank.setOnClickListener {
+            val intent = Intent(this, BayarDibankActivity::class.java)
                 .putExtra("data", data)
             startActivity(intent)
         }
