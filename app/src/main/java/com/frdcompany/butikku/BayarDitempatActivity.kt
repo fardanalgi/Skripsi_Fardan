@@ -61,7 +61,7 @@ class BayarDitempatActivity : AppCompatActivity() {
 
         val builder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
         builder.setContentIntent(pendingIntent)
-            .setSmallIcon(R.drawable.logo_text)
+            .setSmallIcon(R.drawable.logo_new)
             .setLargeIcon(
                 BitmapFactory.decodeResource(
                     this.resources,
