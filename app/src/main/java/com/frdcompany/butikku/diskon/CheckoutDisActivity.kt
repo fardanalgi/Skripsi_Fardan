@@ -1,4 +1,4 @@
-package com.frdcompany.butikku.nodiskon
+package com.frdcompany.butikku.diskon
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -11,17 +11,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import com.frdcompany.butikku.R
+import com.frdcompany.butikku.fragment.home.Diskon
 import com.frdcompany.butikku.fragment.home.Item
+import com.frdcompany.butikku.nodiskon.DetailActivity
+import com.frdcompany.butikku.nodiskon.OrderBankConfirmedActivity
+import kotlinx.android.synthetic.main.activity_bayar_ditempat.*
 import kotlinx.android.synthetic.main.activity_bayar_ditempat.tv_total
 import kotlinx.android.synthetic.main.activity_checkout.*
 
-class CheckoutActivity : AppCompatActivity() {
+class CheckoutDisActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_checkout)
+        setContentView(R.layout.activity_checkout_dis)
 
-        val data = intent.getParcelableExtra<Item>("data")
+        val data = intent.getParcelableExtra<Diskon>("data")
 
         tv_total.text = data.harga
         tv_total2.text = data.harga
@@ -32,10 +36,9 @@ class CheckoutActivity : AppCompatActivity() {
 
             showNotif(data)
         }
-
     }
 
-    private fun showNotif(datas: Item) {
+    private fun showNotif(datas: Diskon) {
         val NOTIFICATION_CHANNEL_ID = "channel_bwa_notif"
         val context = this.applicationContext
         var notificationManager =
@@ -54,7 +57,7 @@ class CheckoutActivity : AppCompatActivity() {
 //        bundle.putString("id", "id_film")
 //        mIntent.putExtras(bundle)
 
-        val mIntent = Intent(this, CheckoutActivity::class.java)
+        val mIntent = Intent(this, CheckoutDisActivity::class.java)
         val bundle = Bundle()
         bundle.putParcelable("data", datas)
         mIntent.putExtras(bundle)

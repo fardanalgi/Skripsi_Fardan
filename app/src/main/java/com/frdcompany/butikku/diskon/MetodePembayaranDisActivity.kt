@@ -28,7 +28,7 @@ class MetodePembayaranDisActivity : AppCompatActivity() {
         }
 
         btn_bayarBankk.setOnClickListener {
-            val intent = Intent(this, BayarDibankActivity::class.java)
+            val intent = Intent(this, BayarDibankDisActivity::class.java)
                 .putExtra("data", data)
             startActivity(intent)
         }

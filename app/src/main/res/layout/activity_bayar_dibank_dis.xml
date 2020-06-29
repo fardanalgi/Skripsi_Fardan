@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f5f5f5"
-    tools:context=".nodiskon.BayarDibankActivity">
+    tools:context=".diskon.BayarDibankDisActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout5"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view5">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/btn_bca"
+            android:id="@+id/btn_bcaa"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -146,7 +146,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/btn_mandiri"
+            android:id="@+id/btn_mandirii"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -199,7 +199,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view7">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/btn_bni"
+            android:id="@+id/btn_bnii"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

@@ -21,7 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
-        <activity android:name=".diskon.BayarDitempatDisActivity"></activity>
+        <activity android:name=".diskon.CheckoutDisActivity"></activity>
+        <activity android:name=".diskon.BayarDibankDisActivity" />
+        <activity android:name=".diskon.BayarDitempatDisActivity" />
         <activity android:name=".diskon.MetodePembayaranDisActivity" />
         <activity android:name=".nodiskon.OrderBankConfirmedActivity" />
         <activity android:name=".nodiskon.OrderConfirmedActivity" />
