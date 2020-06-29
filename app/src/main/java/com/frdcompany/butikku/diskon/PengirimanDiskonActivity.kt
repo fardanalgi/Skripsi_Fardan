@@ -45,7 +45,7 @@ class PengirimanDiskonActivity : AppCompatActivity() {
         }
 
         btn_next.setOnClickListener {
-            val intent = Intent (this, MetodePembayaranActivity::class.java)
+            val intent = Intent (this, MetodePembayaranDisActivity::class.java)
                 .putExtra("data", data)
             startActivity(intent)
         }
