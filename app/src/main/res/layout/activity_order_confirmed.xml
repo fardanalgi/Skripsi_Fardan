@@ -23,7 +23,7 @@
         android:id="@+id/textView32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pemesanan Berhasil"
+        android:text="@string/pemesanan_berhasil"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/colorGrenText"
@@ -34,7 +34,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Barang Sedang dalam pengemasan"
+        android:text="@string/barang_sedang_dalam_pengemasan"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

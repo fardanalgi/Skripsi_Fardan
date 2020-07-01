@@ -3,4 +3,45 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="harga_terbaik">Harga Terbaik</string>
+    <string name="populer">Populer</string>
+    <string name="ayo_ambil_sesuatu">Ayo ambil sesuatu</string>
+    <string name="informasi_produk">Informasi Produk</string>
+    <string name="berat">Berat</string>
+    <string name="kondisi">Kondisi</string>
+    <string name="pemesanan_min">Pemesanan Min</string>
+    <string name="kategori">Kategori</string>
+    <string name="fashion_pilihan_untukmu">Fashion pilihan untukmu</string>
+    <string name="beli">Beli</string>
+    <string name="pengiriman">Pengiriman</string>
+    <string name="alamat_pengiriman">Alamat Pengiriman</string>
+    <string name="total_tagihan">Total Tagihan</string>
+    <string name="pilih_pembayaran">Pilih Pembayaran</string>
+    <string name="pilih_metode_pembayaran">Pilih Metode Pembayaran</string>
+    <string name="metode_pembayaran">Metode Pembayaran</string>
+    <string name="bayar_lebih_cepat">Bayar Lebih Cepat</string>
+    <string name="bayar_ditempat">Bayar Ditempat</string>
+    <string name="bayar_dengan_metode_bank_transfer_dalam_waktu_24jam_sejak_pemesana_dibuat_atau_pesanan_akan_di_batalkan">Bayar dengan metode bank transfer dalam waktu 24jam sejak pemesana dibuat, atau pesanan akan di batalkan</string>
+    <string name="bayar_di_tempat">Bayar di Tempat</string>
+    <string name="anda_dapat_membayar_secra_tunai_pada_saat_anda_menerima_barang_yang_di_pesan">Anda dapat membayar secra tunai pada saat anda menerima barang yang di pesan</string>
+    <string name="konfirmasi_pemesanan">Konfirmasi Pemesanan</string>
+    <string name="pemesanan_diterima">Pemesanan diterima</string>
+    <string name="menunggu_pembayaran">Menunggu Pembayaran</string>
+    <string name="selesaikan_pembayaran_sebelum_24jam">Selesaikan pembayaran sebelum 24jam</string>
+    <string name="salin">Salin</string>
+    <string name="total_yang_harus_di_bayar">Total yang harus di bayar</string>
+    <string name="lanjut_berbelanja">Lanjut Berbelanja</string>
+    <string name="selesaikan_pembayaran_sebelum_24_jam">Selesaikan pembayaran sebelum 24 jam</string>
+    <string name="pemesanan_berhasil">Pemesanan Berhasil</string>
+    <string name="barang_sedang_dalam_pengemasan">Barang Sedang dalam pengemasan</string>
+    <string name="profil">Profil</string>
+    <string name="tetap_perbarui">Tetap Perbarui</string>
+    <string name="keluar">Keluar</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="ubah_bahasa">Ubah bahasa</string>
+    <string name="nomor_telpon">Nomor Telpon</string>
+    <string name="nama_penguna">Nama Penguna</string>
+    <string name="paragraf_satu">Perkenalkan nama saya Fardan Alghipari Selaku pembuat dan pengembang Aplikasi ButikKu dalam pengembangan ini menambahkan beberapa fitur yang sebelum nya tidak ada di aplikasi ButikKu seperti penambahan Metode Pembayaran , Metode bayar di tempat dan Bayar di Bank, dan mendukung Aplikasi Multi Language Inggris dan Indonesia.\n</string>
+    <string name="paragraf_dua">selain menambahkan fitur, pengembang juga mengubah sistem yang ada di dalam Aplikasi seperti merubah ListView menjadi RecyclerView untuk penampungan data , mengubah Bahasa Pemprograman Java Menjadi Kotlin untuk meminimalisir error NullPointerException yang ada di dalam Java.\n</string>
+    <string name="berikut_ini_hasil_screenshoot_butikku_terdahulu">Berikut ini hasil Screenshot ButikKu Terdahulu</string>
 </resources>

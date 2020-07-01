@@ -49,11 +49,6 @@ class CheckoutActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(mChannel)
         }
 
-//        val mIntent = Intent(this, CheckoutSuccessActivity::class.java)
-//        val bundle = Bundle()
-//        bundle.putString("id", "id_film")
-//        mIntent.putExtras(bundle)
-
         val mIntent = Intent(this, CheckoutActivity::class.java)
         val bundle = Bundle()
         bundle.putParcelable("data", datas)

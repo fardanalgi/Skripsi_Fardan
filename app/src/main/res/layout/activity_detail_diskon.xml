@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="Informasi Produk"
+            android:text="@string/informasi_produk"
             android:textColor="@color/colorGrenText"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:text="Fashion pilihan untukmu"
+            android:text="@string/fashion_pilihan_untukmu"
             android:textColor="@color/colorGrenText"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:text="Berat"
+            android:text="@string/berat"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="5dp"
-            android:text="Kondisi"
+            android:text="@string/kondisi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="5dp"
-            android:text="Kategori"
+            android:text="@string/kategori"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="5dp"
-            android:text="Pemesanan Min"
+            android:text="@string/pemesanan_min"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -207,7 +207,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
             android:background="@drawable/shape_rectangle_green"
-            android:text="Buy"
+            android:text="@string/beli"
             android:textColor="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/btn_message_diskon"
             app:layout_constraintEnd_toEndOf="parent"

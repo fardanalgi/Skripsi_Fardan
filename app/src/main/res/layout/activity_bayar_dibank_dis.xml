@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Bayar dengan metode bank transfer dalam waktu 24jan sejak pemesana dibuat, atau pesanan akan di batalkan"
+        android:text="@string/bayar_dengan_metode_bank_transfer_dalam_waktu_24jam_sejak_pemesana_dibuat_atau_pesanan_akan_di_batalkan"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/view3"

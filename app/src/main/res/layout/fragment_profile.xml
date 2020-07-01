@@ -8,6 +8,59 @@
     tools:context=".fragment.ProfileFragment">
 
 
+    <View
+        android:id="@+id/view14"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorAbuAbu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+    <View
+        android:id="@+id/view15"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorAbuAbu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:drawablePadding="10dp"
+        android:text="@string/nama_penguna"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+        android:drawablePadding="10dp"
+        android:text="@string/nomor_telpon"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view14" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
@@ -15,7 +68,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Settings"
+        android:text="@string/profil"
         android:textColor="@color/colorGrenText"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -27,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="Keep it up to date"
+        android:text="@string/tetap_perbarui"
         android:textColor="@color/colorAbuAbu"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,14 +123,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/ic_g_translate_24px"
         android:drawablePadding="10dp"
-        android:text="Change Language"
+        android:text="@string/ubah_bahasa"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        app:layout_constraintTop_toBottomOf="@+id/view15" />
 
     <TextView
         android:id="@+id/tv_edit_profile"
@@ -87,7 +140,7 @@
         android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/ic_help_outline_24px"
         android:drawablePadding="10dp"
-        android:text="About Aplikasi"
+        android:text="@string/tentang_aplikasi"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,24 +154,11 @@
         android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/ic_logout"
         android:drawablePadding="10dp"
-        android:text="Log Out"
+        android:text="@string/keluar"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/tv_edit_profile3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:drawablePadding="10dp"
-        android:text="Help"
-        android:textColor="#f5f5f5"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <View
         android:id="@+id/view"
@@ -156,5 +196,35 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_edit_profile2" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/at"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_username" />
+
+    <TextView
+        android:id="@+id/tv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_username" />
+
+    <TextView
+        android:id="@+id/tv_phonee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_phone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
