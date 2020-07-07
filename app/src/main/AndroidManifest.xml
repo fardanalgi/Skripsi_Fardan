@@ -5,23 +5,27 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
 
     <application
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".sign.signup.SignUpPhotoscreenActivity"></activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".diskon.CheckoutDisActivity" />
         <activity android:name=".diskon.BayarDibankDisActivity" />
         <activity android:name=".diskon.BayarDitempatDisActivity" />
@@ -36,7 +40,7 @@
         <activity android:name=".diskon.DetailDiskonActivity" />
         <activity android:name=".nodiskon.PengirimanActivity" />
         <activity android:name=".nodiskon.DetailActivity" />
-        <activity android:name=".sign.SignUpActivity" />
+        <activity android:name=".sign.signup.SignUpActivity" />
         <activity android:name=".sign.SignInActivity" />
         <activity android:name=".onboarding.OnboardingTreeActivity" />
         <activity android:name=".onboarding.OnboardingTwoActivity" />

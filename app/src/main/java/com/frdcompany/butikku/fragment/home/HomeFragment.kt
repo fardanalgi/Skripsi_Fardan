@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.frdcompany.butikku.nodiskon.DetailActivity
 import com.frdcompany.butikku.diskon.DetailDiskonActivity
 import com.frdcompany.butikku.R
@@ -46,6 +48,11 @@ class HomeFragment : Fragment() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Item")
         mDatabaseDiskon = FirebaseDatabase.getInstance().getReference("Diskon")
         tv_hello2.setText(preferences.getValues("nama"))
+
+        Glide.with(this)
+            .load(preferences.getValues("url"))
+            .apply(RequestOptions.circleCropTransform())
+            .into(img_profile)
 
 
         rv_popular.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)

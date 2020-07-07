@@ -1,4 +1,4 @@
-package com.frdcompany.butikku.sign
+package com.frdcompany.butikku.sign.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.frdcompany.butikku.MainActivity
 import com.frdcompany.butikku.R
+import com.frdcompany.butikku.sign.User
 import com.frdcompany.butikku.utils.Preferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -98,7 +99,7 @@ class SignUpActivity : AppCompatActivity() {
                     preference.setValues("telp", data.telp.toString())
                     preference.setValues("status", "1")
 
-                    val intent = Intent(this@SignUpActivity,MainActivity::class.java)
+                    val intent = Intent(this@SignUpActivity,SignUpPhotoscreenActivity::class.java)
                         .putExtra("nama",data.nama)
                     startActivity(intent)
                 }else{

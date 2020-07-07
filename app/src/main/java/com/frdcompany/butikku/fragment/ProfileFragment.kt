@@ -37,6 +37,11 @@ class ProfileFragment : Fragment() {
 
         preferences = Preferences(context!!.applicationContext)
 
+        Glide.with(this)
+            .load(preferences.getValues("url"))
+            .apply(RequestOptions.circleCropTransform())
+            .into(iv_profilee)
+
         iv_nama.text = preferences.getValues("nama")
         tv_email.text = preferences.getValues("email")
         tv_user.text = preferences.getValues("user")

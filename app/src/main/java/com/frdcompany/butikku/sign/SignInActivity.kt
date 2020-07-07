@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.frdcompany.butikku.MainActivity
 import com.frdcompany.butikku.R
+import com.frdcompany.butikku.sign.signup.SignUpActivity
 import com.frdcompany.butikku.utils.Preferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_in.*

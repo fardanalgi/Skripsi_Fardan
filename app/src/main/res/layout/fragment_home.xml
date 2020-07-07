@@ -95,7 +95,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_bestPrice"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="500dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
@@ -110,7 +110,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="24dp"
-            android:src="@drawable/fardanal"
+            android:src="@drawable/icon_pic"
             app:layout_constraintBottom_toBottomOf="@+id/textView14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_hello" />
