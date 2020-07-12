@@ -34,12 +34,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
-        <ImageView
-            android:id="@+id/ic_cart"
-            android:layout_width="0dp"
-            android:src="@drawable/ic_cart"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/ic_cart"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:src="@drawable/ic_cart"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"/>-->
 
         <ImageView
             android:id="@+id/ic_profile"

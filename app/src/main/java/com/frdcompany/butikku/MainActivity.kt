@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val fragmentHome = HomeFragment()
-        val fragmentCart = CartFragment()
+//        val fragmentCart = CartFragment()
         val fragmentProfile = ProfileFragment()
 
         setFragment(fragmentHome)
@@ -25,23 +25,23 @@ class MainActivity : AppCompatActivity() {
             setFragment(fragmentHome)
 
             changeIcon(ic_home,R.drawable.ic_home_active)
-            changeIcon(ic_cart,R.drawable.ic_cart)
+//            changeIcon(ic_cart,R.drawable.ic_cart)
             changeIcon(ic_profile,R.drawable.ic_profile)
         }
 
-        ic_cart.setOnClickListener {
-            setFragment(fragmentCart)
-
-            changeIcon(ic_home,R.drawable.ic_home)
-            changeIcon(ic_cart,R.drawable.ic_cart_active)
-            changeIcon(ic_profile,R.drawable.ic_profile)
-        }
+//        ic_cart.setOnClickListener {
+//            setFragment(fragmentCart)
+//
+//            changeIcon(ic_home,R.drawable.ic_home)
+//            changeIcon(ic_cart,R.drawable.ic_cart_active)
+//            changeIcon(ic_profile,R.drawable.ic_profile)
+//        }
 
         ic_profile.setOnClickListener {
             setFragment(fragmentProfile)
 
             changeIcon(ic_home,R.drawable.ic_home)
-            changeIcon(ic_cart,R.drawable.ic_cart)
+//            changeIcon(ic_cart,R.drawable.ic_cart)
             changeIcon(ic_profile,R.drawable.ic_profile_active)
         }
     }
