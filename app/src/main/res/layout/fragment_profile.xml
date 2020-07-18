@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5"
+    android:background="@color/colorWhite"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.ProfileFragment">
 
@@ -122,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_nama" />
 
     <TextView
-        android:id="@+id/tv_my_wallet"
+        android:id="@+id/btn_Language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -136,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view15" />
 
     <TextView
-        android:id="@+id/tv_edit_profile"
+        android:id="@+id/btn_about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -173,7 +173,7 @@
         android:background="@color/colorAbuAbu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_my_wallet" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Language" />
 
     <View
         android:id="@+id/view2"
@@ -186,7 +186,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_edit_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_about" />
 
     <View
         android:id="@+id/view3"

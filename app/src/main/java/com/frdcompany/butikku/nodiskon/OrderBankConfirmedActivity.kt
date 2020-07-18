@@ -17,5 +17,9 @@ class OrderBankConfirmedActivity : AppCompatActivity() {
             val intent = Intent (this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        button2.setOnClickListener {
+            finish()
+        }
     }
 }

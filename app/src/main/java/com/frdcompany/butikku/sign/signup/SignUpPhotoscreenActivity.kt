@@ -156,7 +156,7 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
-            //Image Uri will not be null for RESULT_OK
+
             statusAdd = true
             filePath = data?.data!!
 

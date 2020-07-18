@@ -47,12 +47,12 @@ class ProfileFragment : Fragment() {
         tv_user.text = preferences.getValues("user")
         tv_phonee.text = preferences.getValues("telp")
 
-        tv_edit_profile.setOnClickListener {
+        btn_about.setOnClickListener {
             val intent = Intent (context, AboutActivity::class.java)
             startActivity(intent)
         }
 
-        tv_my_wallet.setOnClickListener {
+        btn_Language.setOnClickListener {
             val intent = Intent(Settings.ACTION_LOCALE_SETTINGS)
             startActivity(intent)
         }
